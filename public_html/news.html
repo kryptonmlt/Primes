@@ -7,15 +7,16 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 
         <title>PRIMES | Personalised Recommendations and Internationalisation for MOOCs in European/UK Schools</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="./js/utils.js"></script>
         <script>
 
             window.onload = function () {
-                loadLatest($("#left"), $("#right"));
+                loadAllNews($("#all"));
             }
+
         </script>
     </head>
     <body>
@@ -36,25 +37,8 @@
                 </ul>
             </div>
             <div id="content">
-                <div id="left">
-                    <h1>Welcome to PRIMES</h1>
-                    <p>PRIMES aims to produce a novel e-learning platform, combining the wide reach and popularity of MOOCs with advanced artificial intelligence and data
-                        summarisation algorithms, to provide a truly personalised learning experience, fitted to the needs and characteristics of teenager (secondary school)
-                        students. To accomplish this, PRIMES brings together partners from several sectors (University, SME, secondary schools) and EU countries (UK, Greece, France).
-                        These partners will collaborate to produce high quality digitised learning content, to be delivered through the PRIMES platform in a manner that is tailored to
-                        the specific goals and needs of each individual student. PRIMES will further include pilot science, ICT and history courses, to be used, evaluated, and improved
-                        by students and teachers in the partnered schools.</p>
-                    <h1>Partners</h1>
-                    <div id="photos">
-                        <a href="./partners.html"><img src="images/team/uofg.png" style="width: 70px;height: 70px;" alt="photo"/></a>
-                        <a href="./partners.html"><img src="images/team/vtl.jpg" style="width: 70px;height: 70px;" alt="photo" /></a>
-                        <a href="./partners.html"><img src="images/team/lec.jpg" style="width: 70px;height: 70px;" alt="photo" /></a>
-                        <a href="./partners.html"><img src="images/team/hyndland.png" style="width: 70px;height: 70px;" alt="photo"/></a>
-                    </div>
-                    <h1>Publications</h1>
-                </div>
-                <div id="right">
-                    <h2>Latest news</h2>
+                <div id="all">
+                    <h1>News</h1>
                 </div>
                 <div id="footerline"></div>
             </div>
