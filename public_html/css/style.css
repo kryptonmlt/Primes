@@ -17,10 +17,6 @@ body {
     width: 717px;
 }
 
-a{
-    font-size:12px;
-}
-
 p{
     margin: 15px 0px;
 }
@@ -105,7 +101,7 @@ h1{
 
 h2{
     color:#0094ff;
-    font-size:16px;
+    font-size:18px;
     text-align:center;
     width:200px;
     margin: 10px 0px 15px 0px;
@@ -222,4 +218,13 @@ tr:nth-child(even) {
     padding: 10px;
     margin-right: 5px !important;
     font-size: 20px !important;
+}
+
+.date{
+    font-size: 10px;
+    text-align: right;
+}
+
+.newsHeader{
+    font-size: 15px;
 }

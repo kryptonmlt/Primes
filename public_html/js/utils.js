@@ -35,7 +35,7 @@ function loadLatestNews(obj) {
     $.get(urlLatestNews, function (data) {
         for (var i = 0; i < data.length; i++) {
             var item = data[i];
-            appendNewsItem(item, obj);
+            appendNewsItem(item, obj, false);
         }
     });
 }
@@ -45,21 +45,31 @@ function loadAllNews(obj) {
     $.get(urlNews, function (data) {
         for (var i = 0; i < data.length; i++) {
             var item = data[i];
-            appendNewsItem(item, obj);
+            appendNewsItem(item, obj, true);
         }
     });
 }
 
-function appendNewsItem(item, obj) {
-    obj.append("<a href=\"./news.html\"><b>" + item.title + "</b></a>");
-    obj.append(item.html);
+function appendNewsItem(item, obj, includeHTML) {
+    obj.append("<a class=\"newsHeader\" href=\"./news.html?id=" + item.id + "\"><b>" + item.title + "</b></a>");
+    if (includeHTML) {
+        obj.append("<p><b>" + item.summary + "</b></p>");
+        obj.append(item.html);
+    } else {
+        obj.append("<p>" + item.summary + "</p>");
+    }
     var date = new Date(item.date);
-    obj.append("<p>" + date.customFormat("#D#/#M#/#YYYY#") + "</p>");
+    obj.append("<p class=\"date\">" + date.customFormat("#D#/#M#/#YYYY#") + "</p>");
 }
 
-function appendPublicationsItem(item, obj) {
-    obj.append("<a href=\"./news.html\"><b>" + item.title + "</b></a>");
-    obj.append(item.html);
+function appendPublicationsItem(item, obj, includeHTML) {
+    obj.append("<a class=\"newsHeader\" href=\"./news.html?id=" + item.id + "\"><b>" + item.title + "</b></a>");
+    if (includeHTML) {
+        obj.append("<p><b>" + item.summary + "</b></p>");
+        obj.append(item.html);
+    } else {
+        obj.append("<p>" + item.summary + "</p>");
+    }
     var date = new Date(item.date);
     obj.append("<p>" + date.customFormat("#D#/#M#/#YYYY#") + "</p>");
 }
@@ -72,7 +82,7 @@ function loadAllPublications(obj) {
         }
         for (var i = 0; i < data.length; i++) {
             var item = data[i];
-            appendPublicationsItem(item, obj);
+            appendPublicationsItem(item, obj, true);
         }
     });
 }
@@ -85,7 +95,7 @@ function loadLatestPublications(obj) {
         }
         for (var i = 0; i < data.length; i++) {
             var item = data[i];
-            appendPublicationsItem(item, obj);
+            appendPublicationsItem(item, obj, false);
         }
     });
 }
