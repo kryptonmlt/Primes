@@ -74,7 +74,7 @@ p{
 #header_text {
     top:120px;
     left:43px;
-    width:350px;
+    width:600px;
     position:absolute;
 }
 #header_text p{
@@ -128,6 +128,10 @@ h2{
 #photos a{
     margin-right:14px;
 }
+#photos{
+    
+    text-align: center;
+}
 #right {
     float:right;
     width:210px;
@@ -150,9 +154,10 @@ h2{
     height:10px;
 }
 #footer {
+    font-size: 7pt;
     width:717px;
     text-align:center;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 /********************** Table ***************************/

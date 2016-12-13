@@ -1,10 +1,7 @@
 
-var urlGeneral = "http://130.209.244.160:8028/content/";
-var urlContentTypes = urlGeneral + "types/";
-var urlNews = urlGeneral + "news/";
-var urlPublications = urlGeneral + "publications/";
-var urlLatestNews = urlNews + "latest/3";
-var urlLatestPublications = urlPublications + "latest/3";
+var urlGeneral = "./resources/";
+var urlNews = urlGeneral + "news.json";
+var urlPublications = urlGeneral + "publications.json";
 
 Date.prototype.customFormat = function (formatString) {
     var YYYY, YY, MMMM, MMM, MM, M, DDDD, DDD, DD, D, hhhh, hhh, hh, h, mm, m, ss, s, ampm, AMPM, dMod, th;
@@ -30,22 +27,19 @@ Date.prototype.customFormat = function (formatString) {
     return formatString.replace("#hhhh#", hhhh).replace("#hhh#", hhh).replace("#hh#", hh).replace("#h#", h).replace("#mm#", mm).replace("#m#", m).replace("#ss#", ss).replace("#s#", s).replace("#ampm#", ampm).replace("#AMPM#", AMPM);
 }
 
-function loadLatestNews(obj) {
-
-    $.get(urlLatestNews, function (data) {
-        for (var i = 0; i < data.length; i++) {
-            var item = data[i];
-            appendNewsItem(item, obj, false);
-        }
-    });
-}
-
-function loadAllNews(obj) {
+function loadNews(obj, max) {
 
     $.get(urlNews, function (data) {
-        for (var i = 0; i < data.length; i++) {
+        var details = false;
+        if (max == 0) {
+            max = data.length;
+            details = true;
+        } else if (max > data.length) {
+            max = data.length;
+        }
+        for (var i = 0; i < max; i++) {
             var item = data[i];
-            appendNewsItem(item, obj, true);
+            appendNewsItem(item, obj, details);
         }
     });
 }
@@ -74,34 +68,28 @@ function appendPublicationsItem(item, obj, includeHTML) {
     obj.append("<p>" + date.customFormat("#D#/#M#/#YYYY#") + "</p>");
 }
 
-function loadAllPublications(obj) {
+function loadPublications(obj, max) {
 
     $.get(urlPublications, function (data) {
         if (!data.length) {
             obj.append("<p>No Publications so far.</p>");
         }
-        for (var i = 0; i < data.length; i++) {
+        var details = false;
+        if (max == 0) {
+            max = data.length;
+            details = true;
+        } else if (max > data.length) {
+            max = data.length;
+        }
+        for (var i = 0; i < max; i++) {
             var item = data[i];
-            appendPublicationsItem(item, obj, true);
+            appendPublicationsItem(item, obj, details);
         }
     });
 }
 
-function loadLatestPublications(obj) {
-
-    $.get(urlLatestPublications, function (data) {
-        if (!data.length) {
-            obj.append("<p>No Publications so far.</p>");
-        }
-        for (var i = 0; i < data.length; i++) {
-            var item = data[i];
-            appendPublicationsItem(item, obj, false);
-        }
-    });
-}
-
-function loadLatest(publications, news) {
-    loadLatestNews(news);
-    loadLatestPublications(publications);
+function loadData(publications, news, max) {
+    loadNews(news, max);
+    loadPublications(publications, max);
 }
 

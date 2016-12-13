@@ -1,0 +1,15 @@
+[
+    {
+        "id": 2,
+        "title": "PRIMES Kick-off meeting",
+        "date": 1478476800000,
+        "html": "<p>The kick-off meeting took place at the University of Glasgow in Glasgow,Scotland. The meeting was very well organized consisting of both presentations and discussions in between. Each presentation gave a better understanding of the project to all the partners. In turn, the discussions were highly interactive, which led to every partner expressing their views and any concerns.</p>\r\n<p style=\"text-align:center;\">\r\n<img alt=\"Sir Alwyn Building Glasgow\" height=\"172\" src=\"./images/news/siralwyn.jpg\" width=\"400\"></p>",
+        "summary": "The kick-off meeting took place on the 7th of November 2016 at the University of Glasgow, Scotland."
+    }, {
+        "id": 1,
+        "title": "Website Launched!",
+        "date": 1477958400000,
+        "html": "<p>We are pleased to announce the launch of the PRIMES official website.</p>\r\n<p style=\"text-align:center;\">\r\n<img alt=\"Sir Alwyn Building Glasgow\" height=\"270\" src=\"./images/news/website.jpg\" width=\"300\"></p>",
+        "summary": "We are pleased to announce the launch of the PRIMES official website."
+    }
+]
