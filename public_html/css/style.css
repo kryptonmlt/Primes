@@ -44,6 +44,7 @@ p{
     display:inline;	
 }
 #header ul a{
+    font-size: 15px;
     text-decoration:none;
     color:#FFFFFF;
     margin: 0px 15px;
@@ -67,18 +68,18 @@ p{
     left:540px;
 }
 #logo_pic{
-    top:30px;
+    top:10px;
     left:30px;
 }
 
 #header_text {
     top:120px;
-    left:43px;
-    width:600px;
+    left:30px;
+    width:700px;
     position:absolute;
 }
 #header_text p{
-    font-size: 19px;
+    font-size: 21px;
     color:#FFFFFF;
     font-weight: bold;
     text-shadow: 1px 1px #426372;
