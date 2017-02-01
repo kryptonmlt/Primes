@@ -9,7 +9,7 @@
         "id": 1,
         "title": "Website Launched!",
         "date": 1477958400000,
-        "html": "<p>We are pleased to announce the launch of the PRIMES official website.</p>\r\n<p style=\"text-align:center;\">\r\n<img alt=\"Sir Alwyn Building Glasgow\" height=\"270\" src=\"./images/news/website.jpg\" width=\"300\"></p>",
+        "html": "<p>We are pleased to announce the launch of the PRIMES official website.</p>\r\n<p style=\"text-align:center;\">\r\n<img alt=\"Primes Home Page\" height=\"270\" src=\"./images/news/website.jpg\" width=\"300\"></p>",
         "summary": "We are pleased to announce the launch of the PRIMES official website."
     }
 ]
