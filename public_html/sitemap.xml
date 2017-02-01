@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://dcs.gla.ac.uk/ideas/PRIMES/</loc>
+  <lastmod>2017-01-27T12:03:55+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://dcs.gla.ac.uk/ideas/PRIMES/index.html</loc>
+  <lastmod>2017-01-27T12:03:55+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://dcs.gla.ac.uk/ideas/PRIMES/about.html</loc>
+  <lastmod>2017-01-27T12:03:43+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://dcs.gla.ac.uk/ideas/PRIMES/news.html</loc>
+  <lastmod>2017-01-27T12:03:58+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://dcs.gla.ac.uk/ideas/PRIMES/deliverables.html</loc>
+  <lastmod>2017-01-27T12:03:53+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://dcs.gla.ac.uk/ideas/PRIMES/partners.html</loc>
+  <lastmod>2017-01-27T12:03:49+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://dcs.gla.ac.uk/ideas/PRIMES/contact_us.html</loc>
+  <lastmod>2017-01-27T12:03:51+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>
