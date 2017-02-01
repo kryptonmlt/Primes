@@ -12,10 +12,10 @@ module.exports = function(grunt) {
     includes: {
       build: {
         cwd: 'site',
-        src: [ '*.html', 'pages/*.html' ],
+        src: [ '**/*.*' ],
         dest: 'build/',
         options: {
-          flatten: true,
+          flatten: false,
           includePath: 'include',
         }
       }
