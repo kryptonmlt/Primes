@@ -1,82 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta name="description" content="PRIMES Erasmus+ Project"/>
-        <meta name="author" content="Kurt Portelli"/>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-
-        <title>PRIMES | Personalised Recommendations and Internationalisation for MOOCs in European/UK Schools</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        include "meta.html"
         <style>
-            body {
-                background-color:#426372;
-                color:#000000;
-                font-family: Verdana, Arial, Helvetica, sans-serif;
-                font-size: 12px;
-                margin: 10px 10px;
-                padding: 0px;
-            }
-            .clear{clear:both;}
-            * {
-                margin: 0px;
-                padding: 0px;
-            }
-            #container {
-                margin: 0px auto;
-                text-align: left;
-                width: 717px;
-            }
-
-            p{
-                margin: 15px 0px;
-            }
+            include "primes.min.css"
         </style>
-        <noscript id="deferred-styles">
-            <link href="css/primes.min.css" rel="stylesheet" type="text/css" />
-        </noscript>
-        <script async src="./vendor/jquery/jquery.min.js" type="text/javascript"></script>
-        <script async src="./js/utils.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            var loadDeferredStyles = function () {
-                var addStylesNode = document.getElementById("deferred-styles");
-                var replacement = document.createElement("div");
-                replacement.innerHTML = addStylesNode.textContent;
-                document.body.appendChild(replacement)
-                addStylesNode.parentElement.removeChild(addStylesNode);
-            };
-            var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-                    webkitRequestAnimationFrame || msRequestAnimationFrame;
-            if (raf) {
-                raf(function () {
-                    window.setTimeout(loadDeferredStyles, 0);
-                });
-            } else {
-                window.addEventListener('load', loadDeferredStyles);
-            }
-            window.onload = function () {
-                loadNews($("#right"), 3);
-            }
-
-        </script>
     </head>
     <body>
         <div id="container">
-            <div id="header">
-                <a href="./"><img id="logo_pic" src="images/logowhite2.png" class="img-responsive" alt="" /></a>      
-                <div id="header_text">
-                    <p><span style="font-style: italic; font-size: 20pt">(PRIMES)</span> - Personalised Recommendations and Internationalisation for MOOCs in European/UK Schools</p>
-                </div>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./news.html">News &amp; Events</a></li>
-                    <li><a href="./deliverables.html">Deliverables</a></li>
-                    <li><a href="./partners.html">Partners</a></li>
-                    <li><a href="./contact_us.html">Contact us</a></li>
-                </ul>
-            </div>
+            include "header.html"
             <div id="content">
                 <div id="left">
                     <h1>Contact Us</h1>
@@ -121,7 +53,7 @@
                 </div>
                 <div id="footerline"></div>
             </div>
-            <p style="text-align: center;font-size: 7pt">The PRIMES project is funded by the Erasmus+ programme of the European Union under Project No. 2016-1-UK01-KA201-024631<img src="images/flag_eu.gif" alt="Smiley face" width="36" height="28" align="middle"/></p>
+            include "footer.html"
         </div>
     </body>
 </html>
