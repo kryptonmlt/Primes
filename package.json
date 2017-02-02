@@ -1,8 +1,30 @@
 {
-    "name": "PRIMES",
-    "version": "1.0.0",
-    "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "kurt",
-    "contributors": [],
-    "dependencies": {}
+  "name": "primes-project",
+  "version": "1.0.0",
+  "author": "Nikos Ntarmos <nikos.ntarmos@glasgow.ac.uk>",
+  "description": "PRIMES project web site",
+  "keywords": [
+    "PRIMES",
+    "personalisation",
+    "recommendations",
+    "internationalisation",
+    "MOOC"
+  ],
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kryptonmlt/Primes.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-includes": "~0.4.0",
+    "grunt-rsync": "^2.0.1"
+  }
 }

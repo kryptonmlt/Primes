@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        include "meta.html"
+        <script type="text/javascript">
+            window.onload = function () {
+                loadNews($("#right"), 3);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            include "header.html"
+            <div id="content">
+                <div id="left">
+                    <h1>Contact Us</h1>
+                    <form name="htmlform" method="post" action="html_form_send.php">
+                        <table width="450px">                           
+                            <tr>
+                                <td valign="top">
+                                    <label for="name">Name *</label>
+                                </td>
+                                <td valign="top">
+                                    <input  type="text" id="name" maxlength="50" size="30"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <label for="email">Email Address *</label>
+                                </td>
+                                <td valign="top">
+                                    <input  type="text" id="email" maxlength="80" size="30"/>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <label for="comments">Comments *</label>
+                                </td>
+                                <td valign="top">
+                                    <textarea  id="comments" cols="32" rows="6"></textarea>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align:center">
+                                    <input type="submit" value="Submit"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div id="right">
+                    <h2>Latest news</h2>
+                </div>
+                <div id="footerline"></div>
+            </div>
+            include "footer.html"
+        </div>
+    </body>
+</html>
