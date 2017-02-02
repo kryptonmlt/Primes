@@ -6,6 +6,13 @@
             include "primes.min.css"
         </style>
         <script src="./js/tsorter.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            window.onload = function () {
+                var sorter = tsorter.create( "dTable");
+                sorter.sortColumn($("#monthColumn")[0]);
+                sorter.sortColumn($("#monthColumn")[0]);
+            }
+        </script>
     </head>
     <body>
         <div id="container">
