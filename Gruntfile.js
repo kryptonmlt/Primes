@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 
    rsync: {
       options: {
-         args: ['--delete', '-lOz'],
+         args: ['--delete', '-lOcvz'],
          exclude: ['shared'],
 			recursive: true,
 			ssh: true
@@ -57,5 +57,5 @@ module.exports = function(grunt) {
   // Task definitions
   grunt.registerTask('build', ['clean', 'includes', 'copy']);
   grunt.registerTask('default', ['build']);
-  grunt.registerTask('deploy', ['rsync:ideas']);
+  grunt.registerTask('deploy', ['build', 'rsync:ideas']);
 };
