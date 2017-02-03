@@ -42,10 +42,18 @@
       #logo h1 { font-size:110% }
    }
 </style>
-<script type="text/javascript" src="./js/modernizr.min.js" defer="defer"></script>
-<script type="text/javascript" src="./vendor/jquery/jquery.min.js" defer="defer"></script>
-<script type="text/javascript" src="./js/utils.js" defer="defer"></script>
-<script type="text/javascript" src="./js/jquery.slicknav.min.js" defer="defer"></script>
+<script type="text/javascript">
+   include "modernizr.min.js"
+</script>
+<script type="text/javascript">
+   include "jquery.min.js"
+</script>
+<script type="text/javascript">
+   include "utils.js"
+</script>
+<script type="text/javascript">
+   include "jquery.slicknav.min.js"
+</script>
 <script type="text/javascript">
    $(document).ready(function(){
       $('#menu').slicknav();
