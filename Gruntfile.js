@@ -44,6 +44,13 @@ module.exports = function(grunt) {
             dest: '/var/www/PRIMES',
             host: '130.209.251.166'
          }
+      },
+      test: {
+         options: {
+            src: './build/',
+            dest: '/var/www/PRIMES/test',
+            host: '130.209.251.166'
+         }
       }
    }
   });
