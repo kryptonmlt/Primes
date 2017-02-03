@@ -1,13 +1,54 @@
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PRIMES | Personalised Recommendations and Internationalisation for MOOCs in European Schools</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width"/>
 <meta name="description" content="PRIMES Erasmus+ Project"/>
-<meta name="author" content="Kurt Portelli"/>
+<meta name="author" content="Kurt Portelli, Nikos Ntarmos"/>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 
-<title>PRIMES | Personalised Recommendations and Internationalisation for MOOCs in European Schools</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script src="./vendor/jquery/jquery.min.js" type="text/javascript" defer="defer"></script>
-<script src="./js/utils.js" type="text/javascript" defer="defer"></script>
 <style type="text/css">
-    include "primes.min.css"
+   include "primes.min.css"
+   include "slicknav.min.css"
+
+   .slicknav_menu {
+      display:none;
+   }
+
+   @media (max-width: 860px) {
+      .js #menu {
+         display:none;
+      }
+
+      .js .slicknav_menu {
+         display:block;
+         margin:0 auto;
+      }
+      .sidebar {
+         display:block;
+         margin:0 auto;
+         float:left;
+         clear:both;
+         width:100%;
+         max-width:860px;
+      }
+      #content {
+         width:100%;
+         max-width:860px;
+      }
+   }
+
+   @media (max-width: 542px) {
+       h1,h2,h3,h4 { font-size:110% }
+      #logo h1 { font-size:110% }
+   }
 </style>
+<script type="text/javascript" src="./js/modernizr.min.js" defer="defer"></script>
+<script type="text/javascript">
+   include "jquery.min.js"
+   include "utils.js"
+   include "jquery.slicknav.min.js"
+
+   $(document).ready(function(){
+      $('#menu').slicknav();
+   });
+</script>
