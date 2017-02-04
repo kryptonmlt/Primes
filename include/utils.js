@@ -72,7 +72,7 @@ function loadPublications(obj, max) {
 
     $.get(urlPublications, function (data) {
         if (!data.length) {
-            obj.append("<p>No Publications so far.</p>");
+            obj.append("<p>No publications so far.</p>");
         }
         var details = false;
         if (max == 0) {
