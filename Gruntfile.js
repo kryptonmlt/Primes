@@ -26,7 +26,7 @@ module.exports = function(grunt) {
     copy: {
       main: {
          files: [
-            {expand: true, cwd: 'site', src: ['**/*.{jpg,gif,png,ico,xml,php,css,js,json,otf,eot,svg,ttf,woff,woff2}'], dest: 'build/'}
+            {expand: true, cwd: 'site', src: ['**/*.{jpg,gif,png,pdf,ico,xml,php,css,js,json,otf,eot,svg,ttf,woff,woff2}'], dest: 'build/'}
          ]
       }
     },
