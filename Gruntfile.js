@@ -31,12 +31,27 @@ module.exports = function(grunt) {
       }
     },
 
+   htmlmin: {
+      dist: {
+         options: {
+            removeComments: true,
+            collapseWhitespace: true
+         },
+         files: [{
+            expand: true,
+            cwd: 'build',
+            src: '*.html',
+            dest: 'build'
+         }]
+      }
+   },
+
    rsync: {
       options: {
          args: ['--delete', '-lOcvz'],
          exclude: ['shared'],
-			recursive: true,
-			ssh: true
+         recursive: true,
+         ssh: true
       },
       ideas: {
          options: {
@@ -59,10 +74,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-rsync');
 
   // Task definitions
   grunt.registerTask('build', ['clean', 'includes', 'copy']);
   grunt.registerTask('default', ['build']);
-  grunt.registerTask('deploy', ['build', 'rsync:ideas']);
+  grunt.registerTask('deploy', ['build', 'htmlmin', 'rsync:ideas']);
 };
