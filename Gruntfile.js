@@ -53,6 +53,13 @@ module.exports = function(grunt) {
          recursive: true,
          ssh: true
       },
+      primes: {
+         options: {
+            src: './build/',
+            dest: '/var/www/html',
+            host: '130.209.251.163'
+         }
+      },
       ideas: {
          options: {
             src: './build/',
@@ -79,6 +86,6 @@ module.exports = function(grunt) {
 
   // Task definitions
   grunt.registerTask('build', ['clean', 'includes', 'copy']);
+  grunt.registerTask('deploy', ['build', 'htmlmin', 'rsync:primes']);
   grunt.registerTask('default', ['build']);
-  grunt.registerTask('deploy', ['build', 'htmlmin', 'rsync:ideas']);
 };
