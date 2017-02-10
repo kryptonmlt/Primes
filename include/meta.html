@@ -6,10 +6,14 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 
-<style type="text/css">
-   include "primes.min.css"
-   include "slicknav.min.css"
+<script type="text/javascript" src="./js/modernizr.min.js" defer="defer"></script>
+<script type="text/javascript" src="./js/jquery.min.js" defer="defer"></script>
+<script type="text/javascript" src="./js/utils.min.js" defer="defer"></script>
+<script type="text/javascript" src="./js/jquery.slicknav.min.js" defer="defer"></script>
 
+<link rel="stylesheet" type="text/css" href="css/primes.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/slicknav.min.css"/>
+<style type="text/css">
    .slicknav_menu {
       display:none;
    }
@@ -42,19 +46,7 @@
       #logo h1 { font-size:110% }
    }
 </style>
-<script type="text/javascript">
-   include "modernizr.min.js"
-</script>
-<script type="text/javascript">
-   include "jquery.min.js"
-</script>
-<script type="text/javascript">
-   include "utils.min.js"
-</script>
-<script type="text/javascript">
-   include "jquery.slicknav.min.js"
-</script>
-<script type="text/javascript">
+<script type="text/javascript" defer="defer">
    $(document).ready(function(){
       $('#menu').slicknav();
    });

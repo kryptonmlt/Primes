@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       include "meta.html"
-      <script async src="./js/tsorter.js" type="text/javascript"></script>
+      <script src="./js/tsorter.js" type="text/javascript" defer="defer"></script>
       <script type="text/javascript">
          window.onload = function () {
              document.getElementById("mDelivs").className += " selected";
@@ -11,10 +11,9 @@
              sorter.sortColumn($("#monthColumn")[0]);
          }
       </script>
+      <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
       <style type="text/css">
          table tr:nth-child(even){background-color:#dddddd}
-
-         include "font-awesome.min.css"
       </style>
    </head>
    <body>
