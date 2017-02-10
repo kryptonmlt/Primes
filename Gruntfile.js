@@ -31,6 +31,16 @@ module.exports = function(grunt) {
       }
     },
 
+   sitemap: {
+      dist: {
+         siteRoot: 'build',
+         pattern: ['build/**/*.{html,pdf,png,jpg,gif}', '!build/**/google*.html'],
+         extension: {
+            required: true
+         }
+      }
+   },
+
    htmlmin: {
       dist: {
          options: {
@@ -83,9 +93,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-rsync');
+  grunt.loadNpmTasks('grunt-sitemap');
 
   // Task definitions
-  grunt.registerTask('build', ['clean', 'includes', 'copy']);
+  grunt.registerTask('build', ['clean', 'includes', 'copy', 'sitemap']);
   grunt.registerTask('deploy', ['build', 'htmlmin', 'rsync:primes']);
   grunt.registerTask('default', ['build']);
 };
