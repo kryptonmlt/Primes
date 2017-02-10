@@ -45,7 +45,8 @@ module.exports = function(grunt) {
       dist: {
          options: {
             removeComments: true,
-            collapseWhitespace: true
+            collapseWhitespace: true,
+            keepClosingSlash: true
          },
          files: [{
             expand: true,
@@ -53,6 +54,12 @@ module.exports = function(grunt) {
             src: '*.html',
             dest: 'build'
          }]
+      }
+   },
+
+   'json-minify': {
+      build: {
+         files: 'build/**/*.json'
       }
    },
 
@@ -94,9 +101,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-rsync');
   grunt.loadNpmTasks('grunt-sitemap');
+  grunt.loadNpmTasks('grunt-json-minify');
 
   // Task definitions
   grunt.registerTask('build', ['clean', 'includes', 'copy', 'sitemap']);
-  grunt.registerTask('deploy', ['build', 'htmlmin', 'rsync:primes']);
+  grunt.registerTask('jsonmin', ['json-minify']);
+  grunt.registerTask('deploy', ['build', 'htmlmin', 'jsonmin', 'rsync:primes']);
   grunt.registerTask('default', ['build']);
 };
