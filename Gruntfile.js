@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         dest: 'build/',
         options: {
           flatten: false,
-          includePath: 'include',
+          includePath: [ 'include', 'site/js', 'site/css' ]
         }
       }
     },
