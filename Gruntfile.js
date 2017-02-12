@@ -87,8 +87,8 @@ module.exports = function(grunt) {
       test: {
          options: {
             src: './build/',
-            dest: '/var/www/PRIMES/test',
-            host: '130.209.251.166'
+            dest: '/var/www/html/test',
+            host: '130.209.251.163'
          }
       }
    }
@@ -107,5 +107,6 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['clean', 'includes', 'copy', 'sitemap']);
   grunt.registerTask('jsonmin', ['json-minify']);
   grunt.registerTask('deploy', ['build', 'htmlmin', 'jsonmin', 'rsync:primes']);
+  grunt.registerTask('testing', ['build', 'htmlmin', 'jsonmin', 'rsync:test']);
   grunt.registerTask('default', ['build']);
 };
