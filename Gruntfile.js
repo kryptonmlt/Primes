@@ -91,7 +91,15 @@ module.exports = function(grunt) {
             host: '130.209.251.163'
          }
       }
-   }
+   },
+
+   exec: {
+      mailgunPhp: {
+         cwd: './build/newslist',
+         command: 'bash ../../tools/vendor-setup.sh'
+      }
+   },
+
   });
 
   // Load plugins used by this task gruntfile
@@ -102,11 +110,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-rsync');
   grunt.loadNpmTasks('grunt-sitemap');
   grunt.loadNpmTasks('grunt-json-minify');
+  grunt.loadNpmTasks('grunt-exec');
 
   // Task definitions
   grunt.registerTask('build', ['clean', 'includes', 'copy', 'sitemap']);
   grunt.registerTask('jsonmin', ['json-minify']);
   grunt.registerTask('deploy', ['build', 'htmlmin', 'jsonmin', 'rsync:primes']);
   grunt.registerTask('testing', ['build', 'htmlmin', 'jsonmin', 'rsync:test']);
+  grunt.registerTask('mailgun', ['build', 'exec:mailgunPhp']);
   grunt.registerTask('default', ['build']);
 };

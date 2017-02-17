@@ -26,6 +26,7 @@
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-htmlmin": "^2.2.0",
+    "grunt-exec": "^1.0.1",
     "grunt-includes": "^1.0.0",
     "grunt-json-minify": "^1.1.0",
     "grunt-rsync": "^2.0.1",
