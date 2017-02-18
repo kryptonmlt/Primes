@@ -1,19 +1,25 @@
 <?php
 
    require_once 'vendor/autoload.php';
+   use Mailgun\Mailgun;
    define('MAILGUN_DOMAIN', 'primes-project.eu');
    define('MAILGUN_LIST', 'news@primes-project.eu');
    define('REDIR_LOCATION', '/contact_us.html');
-   define('BASE_URL', 'https://primes-project.eu/newslist');
+   define('BASEURL', 'https://primes-project.eu/test/newslist');
 
 XXXMAILGUNSECRETSXXX
 
-   $mailgun = new Mailgun\Mailgun(MAILGUN_KEY);
-   $mailgunValidate = new Mailgun\Mailgun(MAILGUN_PUBKEY);
+   $mailgun = new Mailgun(MAILGUN_KEY);
+   $mailgunValidate = new Mailgun(MAILGUN_PUBKEY);
    $mailgunOptIn = $mailgun->OptInHandler();
 
+   function saneInput($data) {
+      return htmlspecialchars(stripslashes(trim($data)));
+   }
+
    function validateEmail($email) {
-      return $mailgunValidate->get('address/validate', [ 'address' => $email ])->http_response_body->is_valid;
+      global $mailgunValidate;
+      return $mailgunValidate->get('address/validate', array('address' => $email))->http_response_body->is_valid;
    }
 
 ?>
