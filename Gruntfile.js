@@ -100,6 +100,23 @@ module.exports = function(grunt) {
       }
    },
 
+   'string-replace': {
+      mailgunAuth: {
+         files: [{
+            expand: true,
+            cwd: './site/',
+            src: '**/init.php',
+            dest: './build/'
+         }],
+         options: {
+            replacements: [{
+               pattern: 'XXXMAILGUNSECRETSXXX',
+               replacement: grunt.file.read('./secrets')
+            }]
+         }
+      }
+   }
+
   });
 
   // Load plugins used by this task gruntfile
@@ -111,12 +128,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sitemap');
   grunt.loadNpmTasks('grunt-json-minify');
   grunt.loadNpmTasks('grunt-exec');
+  grunt.loadNpmTasks('grunt-string-replace');
 
   // Task definitions
-  grunt.registerTask('build', ['clean', 'includes', 'copy', 'sitemap']);
+  grunt.registerTask('build', ['clean', 'includes', 'copy', 'sitemap', 'mailgun']);
   grunt.registerTask('jsonmin', ['json-minify']);
   grunt.registerTask('deploy', ['build', 'htmlmin', 'jsonmin', 'rsync:primes']);
   grunt.registerTask('testing', ['build', 'htmlmin', 'jsonmin', 'rsync:test']);
-  grunt.registerTask('mailgun', ['build', 'exec:mailgunPhp']);
+  grunt.registerTask('mailgun', ['exec:mailgunPhp', 'string-replace:mailgunAuth']);
   grunt.registerTask('default', ['build']);
 };

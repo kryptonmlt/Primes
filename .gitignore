@@ -3,3 +3,4 @@ build
 nbproject/
 tools/composer.phar
 tools/old_installer.sig
+secrets
