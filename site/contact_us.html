@@ -2,6 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       include "meta.html"
+      <style type="text/css">
+         @media (max-width: 860px) {
+            .sidebar {
+               display:block;
+               margin:0 auto;
+               float:left;
+               clear:both;
+               width:90%;
+               margin-left: 50%;
+               margin-right: -50%;
+               transform:translateX(-50%);
+               max-width:800px;
+            }
+         }
+      </style>
       <script type="text/javascript">
          window.onload = function () {
              document.getElementById("mCntct").className += " selected";
@@ -15,7 +30,7 @@
          <div id="site_content">
             <div id="content">
                <h1>Contact Us</h1>
-			   <p>We are keen on discussing PRIMES with all interested stakeholders and would be delighted to hear your questions, thoughts and suggestions. Please use the form below to contact us and we shall respond as soon as we can. Alternatively, you can connect with us through our social media accounts (links on the right) or subscribe to our (low volume) mailing list [<a href="newslist/subscribe.php">here</a>].</p>
+               <p>We are keen on discussing PRIMES with all interested stakeholders and would be delighted to hear your questions, thoughts and suggestions. Please use the form below to contact us and we shall respond as soon as we can. Alternatively, you can connect with us through our social media accounts or [<a href="newslist/subscribe.php">subscribe to our mailing list</a>].</p>
                <form name="htmlform" method="post" action="html_form_send.php">
                   <table width="100%">                           
                      <tr>
@@ -50,21 +65,28 @@
                   </table>
                </form>
             </div>
-            <div class="sidebar" id="news">
+            <div class="sidebar" id="contact-info">
                <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
                <div class="container">
                   <ul id="contact-list">
-                     <li>
-                        <a href="mailto:info@primes-project.eu"><i class="fa fa-envelope"></i></a>
+                     <li><i class="fa fa-map-marker"></i>:<br/>
+                        Project PRIMES Coordinator<br/>
+                        Sir Alwyn Williams Building<br/>
+                        Glasgow G12 8RZ<br/>
+                        Scotland<br/>
+                        United Kingdom
                      </li>
-                     <li>
-                        <a href="https://twitter.com/primes_project"><i class="fa fa-twitter"></i></a>
+                     <li><i class="fa fa-envelope"></i>:
+                        <a href="mailto:info@primes-project.eu" alt="Email" target="_blank">info [at] primes-project [dot] eu</i></a>
                      </li>
-                     <li>
-                        <a href="https://www.facebook.com/ProjectPRIMES"><i class="fa fa-facebook"></i></a>
+                     <li><i class="fa fa-twitter"></i>:
+                        <a href="https://twitter.com/Project_PRIMES" alt="Twitter" target="_blank">@Project_PRIMES</i></a>
                      </li>
-                     <li>
-                        <a href="https://plus.google.com/u/0/107236897284106820905"><i class="fa fa-google-plus"></i></a>
+                     <li><i class="fa fa-facebook"></i>:
+                        <a href="https://www.facebook.com/ProjectPRIMES" alt="Facebook" target="_blank">ProjectPRIMES</i></a>
+                     </li>
+                     <li><i class="fa fa-google-plus"></i>:
+                        <a href="https://plus.google.com/u/0/107236897284106820905" alt="Google+" target="_blank">Project PRIMES</i></a>
                      </li>
                   </ul>
                </div>
