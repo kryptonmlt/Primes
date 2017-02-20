@@ -36,7 +36,7 @@ module.exports = function(grunt) {
          siteRoot: 'build',
          pattern: ['build/**/*.{html,pdf,png,jpg,gif}', '!build/**/google*.html'],
          extension: {
-            required: true
+            required: false
          }
       }
    },
