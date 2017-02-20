@@ -65,6 +65,7 @@
          <div id="content_header"></div>
          <div id="site_content">
             <div id="content_solo">
+               <p>Please fill in all required fields below (marked with an asterisk) to subscribe to the PRIMES mailing list and newsletter.</p>
                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="subscribe">
                   <div class="field">
                      <label>First Name *
