@@ -4,8 +4,8 @@
    use Mailgun\Mailgun;
    define('MAILGUN_DOMAIN', 'primes-project.eu');
    define('MAILGUN_LIST', 'news@primes-project.eu');
-   define('REDIR_LOCATION', '/contact_us.html');
-   define('BASEURL', 'https://primes-project.eu/test/newslist');
+   define('REDIR_LOCATION', 'contact_us.php');
+   define('BASEURL', 'https://primes-project.eu/test');
 
 XXXMAILGUNSECRETSXXX
 

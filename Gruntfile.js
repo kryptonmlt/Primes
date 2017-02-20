@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     includes: {
       build: {
         cwd: 'site',
-        src: [ '**/*.html' ],
+        src: [ '**/*.html', '**/*.php' ],
         dest: 'build/',
         options: {
           flatten: false,
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
     copy: {
       main: {
          files: [
-            {expand: true, cwd: 'site', src: ['**/*.{jpg,gif,png,pdf,ico,xml,php,css,js,json,otf,eot,svg,ttf,woff,woff2}'], dest: 'build/'}
+            {expand: true, cwd: 'site', src: ['**/*.{jpg,gif,png,pdf,ico,xml,css,js,json,otf,eot,svg,ttf,woff,woff2}'], dest: 'build/'}
          ]
       }
     },
@@ -95,8 +95,8 @@ module.exports = function(grunt) {
 
    exec: {
       mailgunPhp: {
-         cwd: './build/newslist',
-         command: 'bash ../../tools/vendor-setup.sh'
+         cwd: './build/',
+         command: 'bash ../tools/vendor-setup.sh'
       }
    },
 
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
          files: [{
             expand: true,
             cwd: './site/',
-            src: '**/init.php',
+            src: '**/mailgun-init.php',
             dest: './build/'
          }],
          options: {
