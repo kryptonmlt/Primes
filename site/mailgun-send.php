@@ -9,7 +9,7 @@
             'from' => 'noreply@primes-project.eu',
             'to' => MAILGUN_LIST,
             'subject' => $subject,
-            'html' => $body
+            'text' => $body
       ]);
       header('Location: ' . REDIR_LOCATION);
    }
