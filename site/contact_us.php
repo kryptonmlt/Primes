@@ -141,29 +141,26 @@
                <div>
                   <div class="contact-item">
                      <span class="contact-icon"><i class="fa fa-map-marker"></i></span>
-                     <span class="contact-data"><a href="https://goo.gl/maps/yaNkJ7V1HEA2" alt="Mailing address" target="_blank">Project PRIMES Coordinator<br/>
+                     <span class="contact-data"><a href="https://goo.gl/maps/yaNkJ7V1HEA2" alt="Mailing address" target="_blank">Project PRIMES<br/>
                         Sir Alwyn Williams Building<br/>
+                        University of Glasgow<br/>
                         Glasgow G12 8RZ<br/>
                         Scotland<br/>
                         United Kingdom</a>
                      </span>
                   </div>
-                  <br/>
                   <div class="contact-item">
                      <span class="contact-icon"><i class="fa fa-envelope"></i></span>
                      <span class="contact-data"><a href="mailto:info@primes-project.eu" alt="Email" target="_blank">info [at] primes [dash] project [dot] eu</a></span>
                   </div>
-                  <br/>
                   <div class="contact-item">
                      <span class="contact-icon"><i class="fa fa-twitter"></i></span>
                      <span class="contact-data"><a href="https://twitter.com/Project_PRIMES" alt="Twitter" target="_blank">@Project_PRIMES</a></span>
                   </div>
-                  <br/>
                   <div class="contact-item">
                      <span class="contact-icon"><i class="fa fa-facebook"></i></span>
                      <span class="contact-data"><a href="https://www.facebook.com/ProjectPRIMES" alt="Facebook" target="_blank">ProjectPRIMES</a></span>
                   </div>
-                  <br/>
                   <div class="contact-item">
                      <span class="contact-icon"><i class="fa fa-google-plus"></i></span>
                      <span class="contact-data"><a href="https://plus.google.com/u/0/107236897284106820905" alt="Google+" target="_blank">Project PRIMES</a></span>
